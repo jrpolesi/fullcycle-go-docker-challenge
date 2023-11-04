@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY ./app /app
 
-RUN go build -o fullcycle main.go
+RUN go build -ldflags "-s -w" -o fullcycle main.go
 
 FROM scratch
 
